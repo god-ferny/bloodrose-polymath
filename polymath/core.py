@@ -7,7 +7,6 @@ from polymath import cleaner
 import os
 import logging 
 
-init()
 
 async def main():
     # load the config

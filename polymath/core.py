@@ -1,7 +1,6 @@
 from polymath.config import TomlConfig
 from polymath.packs import PacksManager
 from aiohttp import web
-from colorama import Fore,init
 import asyncio
 from polymath import server
 from polymath import cleaner
@@ -22,11 +21,7 @@ async def main():
     packs_manager = PacksManager(config)
     
     # set debugging Level.
-    logging.basicConfig(
-        level=config['extra']['debug_level'],
-        format="[%(asctime)s] "+Fore.YELLOW+"[%(levelname)s] "+Fore.RESET+"%(message)s",
-        filename= str(config['extra']['log2file']) if str(config['extra']['log2file']) != "-1" else None
-    )
+
 
     server.setup(app, config, packs_manager) # setup the routes and server.
 

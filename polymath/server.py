@@ -3,8 +3,8 @@ import re
 
 from aiohttp import web
 from datetime import datetime
-from colorama import Fore,init
-init()
+
+
 
 def setup(app, config, packs_manager):
     routes = Routes(config, packs_manager)
